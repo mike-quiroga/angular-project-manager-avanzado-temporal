@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectListService } from './services/project-list.service';
 import { Project } from './models/project.model';
-import { HttpService } from '../../common/services/http.service';
-import {Config} from '../../common/config';
+import { HttpService } from '../../../common/services/http.service';
+import {Config} from '../../../common/config';
 import {AuthenticationService} from 'app/common/services/authentication.service';
 
 @Component({
