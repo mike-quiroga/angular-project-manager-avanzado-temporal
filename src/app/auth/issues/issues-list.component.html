@@ -23,6 +23,25 @@
     </div>
 
   </div>
+
+  <h2>Issues (ng-template)</h2>
+  <ng-template ngFor [ngForOf]="issues" let-issue let-index="index">
+    <div class="b-issue__title-container">
+      <a href="">
+        <h3 class="b-issue__title">{{ issue.title }}</h3>
+      </a>
+    </div>
+  </ng-template>
+
+  <h2>Issues (ng-template + custom directive)</h2>
+  <ng-template appFor [appForOf]="issues" let-issue let-index="index">
+    <div class="b-issue__title-container">
+      <a href="">
+        <h3 class="b-issue__title">{{ issue.title }}</h3>
+      </a>
+    </div>
+  </ng-template>
+
 </div>
 
 <div class="row">

@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'issues', loadChildren : './../issues/issues.module#IssuesModule',
     data : { name: 'Issues' }, canActivate: [ AuthGuard ]
+  },
+  {
+    path: 'usuarios', loadChildren : './../users/users.module#UsersModule',
+    data : { name: 'Usuarios' }, canActivate: [ AuthGuard ]
   }
 ];
 @NgModule({

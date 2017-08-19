@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+
+  <div class="form-group-fields" formGroupName="user">
+    <input formControlName="name">
+    <input formControlName="username">
+    <input type="password" formControlName="password">
+    <input type="email" formControlName="email">
+
+    <button>Guardar</button>
+  </div>
+
+  <pre>
+  {{ form.value | json}}
+    </pre>
+</form>
