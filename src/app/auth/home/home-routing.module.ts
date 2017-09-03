@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'usuarios', loadChildren : './../users/users.module#UsersModule',
     data : { name: 'Usuarios' }, canActivate: [ AuthGuard ]
+  },
+  {
+    path: 'reportes', loadChildren : './../reports/reports.module#ReportsModule',
+    canActivate : [ AuthGuard ]
   }
 ];
 @NgModule({

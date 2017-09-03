@@ -1,0 +1,32 @@
+<div *ngIf="isLoading; else elseBlock">
+  <div class="auth-loader-container">
+    <app-loader></app-loader>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <h1>Reportes</h1>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <table class="table table-bordered table-hover">
+        <tr>
+          <th>Status</th>
+          <th>Count</th>
+        </tr>
+        <tr>
+          <td>Open Issues</td>
+          <td>{{openIssues}}</td>
+        </tr>
+        <tr>
+          <td>Closed Issues</td>
+          <td>{{closedIssues}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <p-chart type="pie" [data]="chartData"></p-chart>
+    </div>
+  </div>
+</ng-template>
+

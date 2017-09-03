@@ -54,6 +54,14 @@
                    [routerLinkActiveOptions]="{ exact: true }"
                    title="Usuarios">Usuarios</a>
               </li>
+              <li class="leaf"
+                  [ngClass]="{ active: router.url.indexOf('/auth/reportes') !== -1}"
+                  *ngIf="_authService.isLoggedIn()">
+                <a routerLink="/auth/reportes"
+                   routerLinkActive="active"
+                   [routerLinkActiveOptions]="{ exact: true }"
+                   title="Reportes">Reportes</a>
+              </li>
               <li class="leaf" *ngIf="_authService.isLoggedIn()">
                 <a title="Cerrar sesión" (click)="logout()">Salir</a>
               </li>

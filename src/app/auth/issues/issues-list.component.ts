@@ -10,11 +10,26 @@ import { Issue } from './models/issue.model';
 export class IssuesListComponent implements OnInit {
 
   issues: Array<Issue> = [];
+  isLoading = true;
 
   constructor(private _issuesListService: IssuesListService) { }
 
   ngOnInit() {
-    this.issues = this._issuesListService.getAll();
+    this.getAllIssues();
+  }
+
+  getAllIssues() {
+    this._issuesListService.getAll().subscribe((issues: Issue[] = []) => {
+        this.issues = issues;
+        this.isLoading = false;
+      },
+      err => {
+        console.error(err);
+        this.isLoading = false;
+      },
+      () => {
+        console.log('Finished!');
+      });
   }
 
 }
