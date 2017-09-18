@@ -21,7 +21,7 @@
     <ng-content select="h2"></ng-content>
     <div class="b-project" *ngFor="let project of projects">
       <div class="b-project__title-container">
-        <a routerLink="/proyectos/detalle/{{project.id}}">
+        <a routerLink="/auth/proyectos/detalle/{{project.id}}">
           <h3 class="b-project__title">{{ project.title | uppercase}}</h3>
         </a>
       </div>
